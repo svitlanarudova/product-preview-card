@@ -146,8 +146,8 @@ MAIN
    ARTICLE
 ================================ */
 .product-card {
-  overflow: hidden;
-  max-inline-size: min(93%, 37.5rem);
+  --max-w-card: 37.5rem;
+  max-inline-size: min(93%, var(--max-w-card));
   background-color: var(--color-white);
   border-radius: var(--border-r-sm);
 }
