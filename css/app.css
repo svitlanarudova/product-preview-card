@@ -78,6 +78,7 @@ img{
   --fz-lg: 2rem;
   --lh-primary: 1.6;
   --lh-secondary: 1.2;
+  --lh-s: 1;
   --fw-700: 700;
   --letter-sp: 0.3125rem;
 
@@ -104,11 +105,10 @@ body {
 ================================ */
 .title {
   --fw-title: 700;
-  --lh-title: 1;
   font-family: var(--second-family), sans-serif;
   font-size: var(--fz-lg);
   font-weight: var(--fw-title);
-  line-height: var(--lh-title);
+  line-height: var(--lh-s);
   color: var(--color-black);
 }
 
@@ -153,7 +153,7 @@ MAIN
 }
 
 .product-card__image {
-  aspect-ratio: 350/342;
+  aspect-ratio: 350 / 342;
 }
 
 .product-card__image img {
@@ -168,7 +168,7 @@ MAIN
   padding: var(--space-sm);
 }
 
-.product-card__discribe {
+.product-card__describe {
   display: grid;
   row-gap: var(--space-s);
 }
@@ -186,6 +186,7 @@ MAIN
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-xs);
+  line-height: var(--lh-s);
 }
 
 .product-card__current-cost {
