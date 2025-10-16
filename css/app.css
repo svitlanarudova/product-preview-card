@@ -147,6 +147,8 @@ MAIN
 ================================ */
 .product-card {
   --max-w-card: 37.5rem;
+
+  overflow: hidden;
   max-inline-size: min(93%, var(--max-w-card));
   background-color: var(--color-white);
   border-radius: var(--border-r-sm);
