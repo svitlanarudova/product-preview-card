@@ -1,0 +1,232 @@
+/* ================================
+FONTS
+================================ */
+@import url("https://fonts.googleapis.com/css?family=Fraunces:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap");
+
+/* ================================
+   RESET
+================================ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+ul,
+li{
+	list-style: none;
+}
+
+button{
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+img{
+	max-inline-size: 100%;
+	display: block;
+}
+
+/* ================================
+   VARIABLES
+================================ */
+:root {
+  /* Spaces */
+  --space-xs: 1rem;
+  --space-s: 1.5rem;
+  --space-sm: 2rem;
+
+  /* Colors */
+  --color-primary: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-black: hsl(212, 21%, 14%);
+  --color-green-700: hsl(158, 42%, 18%);
+  --color-cream: hsl(30, 38%, 92%);
+
+  /* Typography */
+  --ff-primary: "Montserrat", sans-serif;
+  --second-family: "Fraunces", sans-serif;
+  --fz-primary: 0.875rem;
+  --fz-lg: 2rem;
+  --lh-primary: 1.6;
+  --lh-secondary: 1.2;
+  --fw-700: 700;
+  --letter-sp: 0.3125rem;
+
+  /*Border & Outline*/
+  --border-r-sm: 0.5rem;
+
+  /* Effects */
+  --transition: 0.2s;
+}
+/* ================================
+   LAYOUT
+================================ */
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fz-primary);
+  color: var(--color-primary);
+  line-height: var(--lh-primary);
+  background-color: var(--color-cream);
+}
+
+/* ================================
+   COMPONENTS
+================================ */
+.title {
+  --fw-title: 700;
+  --lh-title: 1;
+  font-family: var(--second-family), sans-serif;
+  font-size: var(--fz-lg);
+  font-weight: var(--fw-title);
+  line-height: var(--lh-title);
+  color: var(--color-black);
+}
+
+.button {
+  --btn-space-sm: 0.5rem;
+  --btn-l-h: 1.1;
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-700);
+  column-gap: var(--btn-space-sm);
+  padding: var(--space-xs);
+  line-height: var(--btn-l-h);
+  justify-content: center;
+  color: var(--color-white);
+  border-radius: var(--btn-space-sm);
+  background-color: var(--color-green-500);
+  transition: background-color var(--transition);
+}
+
+.button svg path {
+  stroke-width: 0.0625rem;
+}
+
+/* ================================
+MAIN
+================================ */
+.main {
+  display: grid;
+  place-items: center;
+  min-block-size: 100vh;
+}
+
+/* ================================
+   ARTICLE
+================================ */
+.product-card {
+  --max-w-card: 37.5rem;
+  max-inline-size: min(93%, var(--max-w-card));
+  background-color: var(--color-white);
+}
+
+.product-card__image {
+  aspect-ratio: 350/342;
+}
+
+.product-card__image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.product-card__content {
+  display: grid;
+  row-gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+.product-card__discribe {
+  display: grid;
+  row-gap: var(--space-s);
+}
+
+.product-card__label {
+  --fz-label: 0.75rem;
+  font-size: var(--fz-label);
+  letter-spacing: var(--letter-sp);
+  text-transform: uppercase;
+  line-height: var(--lh-secondary);
+}
+
+.product-card__price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.product-card__current-cost {
+  font-family: var(--second-family), sans-serif;
+  font-size: var(--fz-lg);
+  font-weight: var(--fw-700);
+  color: var(--color-green-500);
+}
+
+.product-card__old-cost {
+  --fz-old-cost: 0.8125rem;
+  font-size: var(--fz-old-cost);
+  text-decoration: line-through;
+  line-height: var(--lh-secondary);
+}
+
+@media (min-width: 36.875em){
+  .product-card {
+    display: flex;
+  }
+
+  .product-card__image {
+    overflow: hidden;
+    flex: 1 1 18.75rem;
+  }
+  .product-card__content {
+    flex: 1 1 18.75rem;
+  }
+}
+
+@media (any-hover: hover), (pointer: fine){
+  .button:hover {
+    background-color: var(--color-green-700);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0s !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0s !important;
+		scroll-behavior: auto !important;
+	}
+}
