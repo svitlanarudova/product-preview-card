@@ -2,9 +2,10 @@
 
 # Frontend Mentor - Product preview card component
 
-![Design preview for the Blog preview card coding challenge](./preview.jpg)
+![Design preview for the Product preview card component](./preview.jpg)
 
 ## Project Overview 📋 
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa).
 
 This is my solution to the Product preview card component challenge on Frontend Mentor.
 The goal was to build a responsive component that matches the provided design as closely as possible, working well on both mobile and desktop devices.
